@@ -1,0 +1,11 @@
+{
+  "name": "paintart-clock",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "validate:catalog": "node scripts/validate-catalog.mjs",
+    "check": "npm run validate:catalog && npm test"
+  }
+}

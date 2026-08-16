@@ -1,0 +1,484 @@
+[
+  {
+    "id": "met-435641",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/435641",
+    "title": "Madonna and Child",
+    "artist": "Giovanni Bellini",
+    "date": "late 1480s",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Infants",
+      "Women",
+      "Madonna",
+      "Madonna and Child",
+      "Jesus"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DT375.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DT375.jpg",
+    "alt": "Madonna and Child by Giovanni Bellini (late 1480s)",
+    "publicDomain": true,
+    "creditLine": "Rogers Fund, 1908"
+  },
+  {
+    "id": "met-435728",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/435728",
+    "title": "The Last Communion of Saint Jerome",
+    "artist": "Botticelli (Alessandro di Mariano Filipepi)",
+    "date": "early 1490s",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Saint Jerome",
+      "Monks",
+      "Crucifixion"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP-24049-001.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-24049-001.jpg",
+    "alt": "The Last Communion of Saint Jerome by Botticelli (Alessandro di Mariano Filipepi) (early 1490s)",
+    "publicDomain": true,
+    "creditLine": "Bequest of Benjamin Altman, 1913"
+  },
+  {
+    "id": "met-435851",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/435851",
+    "title": "The Meditation on the Passion",
+    "artist": "Vittore Carpaccio",
+    "date": "ca. 1490",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Skulls",
+      "Men",
+      "Christ",
+      "Saint Jerome",
+      "Job"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP296427.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP296427.jpg",
+    "alt": "The Meditation on the Passion by Vittore Carpaccio (ca. 1490)",
+    "publicDomain": true,
+    "creditLine": "John Stewart Kennedy Fund, 1911"
+  },
+  {
+    "id": "met-435853",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/435853",
+    "title": "The Coronation of the Virgin",
+    "artist": "Annibale Carracci",
+    "date": "after 1595",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Musical Instruments",
+      "Doves",
+      "Virgin Mary",
+      "Gods"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP-27033-001.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-27033-001.jpg",
+    "alt": "The Coronation of the Virgin by Annibale Carracci (after 1595)",
+    "publicDomain": true,
+    "creditLine": "Purchase, Bequest of Miss Adelaide Milton de Groot (1876-1967), by exchange, and Dr. and Mrs. Manuel Porter and sons Gift, in honor of Mrs. Sarah Porter, 1971"
+  },
+  {
+    "id": "met-436244",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/436244",
+    "title": "Virgin and Child with Saint Anne",
+    "artist": "Albrecht Dürer",
+    "date": "probably 1519",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Madonna and Child",
+      "Saint Anne"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP280846.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP280846.jpg",
+    "alt": "Virgin and Child with Saint Anne by Albrecht Dürer (probably 1519)",
+    "publicDomain": true,
+    "creditLine": "Bequest of Benjamin Altman, 1913"
+  },
+  {
+    "id": "met-436323",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/436323",
+    "title": "Marie Emilie Coignet de Courson (1716–1806) with a Dog",
+    "artist": "Jean Honoré Fragonard",
+    "date": "ca. 1769",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Portraits",
+      "Women",
+      "Dogs"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP-1019-01.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-1019-01.jpg",
+    "alt": "Marie Emilie Coignet de Courson (1716–1806) with a Dog by Jean Honoré Fragonard (ca. 1769)",
+    "publicDomain": true,
+    "creditLine": "Fletcher Fund, 1937"
+  },
+  {
+    "id": "met-436440",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/436440",
+    "title": "Cottage Children (The Wood Gatherers)",
+    "artist": "Thomas Gainsborough",
+    "date": "1787",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Children",
+      "Boys",
+      "Girls"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP169640.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP169640.jpg",
+    "alt": "Cottage Children (The Wood Gatherers) by Thomas Gainsborough (1787)",
+    "publicDomain": true,
+    "creditLine": "Bequest of Mary Stillman Harkness, 1950"
+  },
+  {
+    "id": "met-436573",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/436573",
+    "title": "Cardinal Fernando Niño de Guevara (1541–1609)",
+    "artist": "El Greco (Domenikos Theotokopoulos)",
+    "date": "ca. 1600",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Men",
+      "Portraits"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP-17777-001.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-17777-001.jpg",
+    "alt": "Cardinal Fernando Niño de Guevara (1541–1609) by El Greco (Domenikos Theotokopoulos) (ca. 1600)",
+    "publicDomain": true,
+    "creditLine": "H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929"
+  },
+  {
+    "id": "met-436658",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/436658",
+    "title": "Hermann von Wedigh III (died 1560)",
+    "artist": "Hans Holbein the Younger",
+    "date": "1532",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Men",
+      "Portraits",
+      "Latin"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP164836.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP164836.jpg",
+    "alt": "Hermann von Wedigh III (died 1560) by Hans Holbein the Younger (1532)",
+    "publicDomain": true,
+    "creditLine": "Bequest of Edward S. Harkness, 1940"
+  },
+  {
+    "id": "met-436840",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/436840",
+    "title": "Self-Portrait with Two Pupils, Marie Gabrielle Capet (1761–1818) and Marie Marguerite Carraux de Rosemond (1765–1788)",
+    "artist": "Adélaïde Labille-Guiard",
+    "date": "1785",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Painting",
+      "Self-portraits",
+      "Women",
+      "Artists"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP320103.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP320103.jpg",
+    "alt": "Self-Portrait with Two Pupils, Marie Gabrielle Capet (1761–1818) and Marie Marguerite Carraux de Rosemond (1765–1788) by Adélaïde Labille-Guiard (1785)",
+    "publicDomain": true,
+    "creditLine": "Gift of Julia A. Berwind, 1953"
+  },
+  {
+    "id": "met-436851",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/436851",
+    "title": "Elizabeth Farren (born about 1759, died 1829), Later Countess of Derby",
+    "artist": "Sir Thomas Lawrence",
+    "date": "1790",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Portraits",
+      "Women"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP169218.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP169218.jpg",
+    "alt": "Elizabeth Farren (born about 1759, died 1829), Later Countess of Derby by Sir Thomas Lawrence (1790)",
+    "publicDomain": true,
+    "creditLine": "Bequest of Edward S. Harkness, 1940"
+  },
+  {
+    "id": "met-436918",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/436918",
+    "title": "Venus and Cupid",
+    "artist": "Lorenzo Lotto",
+    "date": "1520s",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Female Nudes",
+      "Cupid",
+      "Venus"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP-25975-001.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-25975-001.jpg",
+    "alt": "Venus and Cupid by Lorenzo Lotto (1520s)",
+    "publicDomain": true,
+    "creditLine": "Purchase, Mrs. Charles Wrightsman Gift, in honor of Marietta Tree, 1986"
+  },
+  {
+    "id": "met-436964",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/436964",
+    "title": "Young Lady in 1866",
+    "artist": "Edouard Manet",
+    "date": "1866",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Portraits",
+      "Women",
+      "Parrots"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP273977.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP273977.jpg",
+    "alt": "Young Lady in 1866 by Edouard Manet (1866)",
+    "publicDomain": true,
+    "creditLine": "Gift of Erwin Davis, 1889"
+  },
+  {
+    "id": "met-437326",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/437326",
+    "title": "Blind Orion Searching for the Rising Sun",
+    "artist": "Nicolas Poussin",
+    "date": "1658",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Orion",
+      "Diana",
+      "Landscapes"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP148490.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP148490.jpg",
+    "alt": "Blind Orion Searching for the Rising Sun by Nicolas Poussin (1658)",
+    "publicDomain": true,
+    "creditLine": "Fletcher Fund, 1924"
+  },
+  {
+    "id": "met-437329",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/437329",
+    "title": "The Abduction of the Sabine Women",
+    "artist": "Nicolas Poussin",
+    "date": "probably 1633–34",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Suffering",
+      "Children",
+      "Men",
+      "Women",
+      "Horses"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP-29324-001.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-29324-001.jpg",
+    "alt": "The Abduction of the Sabine Women by Nicolas Poussin (probably 1633–34)",
+    "publicDomain": true,
+    "creditLine": "Harris Brisbane Dick Fund, 1946"
+  },
+  {
+    "id": "met-437549",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/437549",
+    "title": "Wheat Fields",
+    "artist": "Jacob van Ruisdael",
+    "date": "ca. 1670",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Roads",
+      "Landscapes"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP145911.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP145911.jpg",
+    "alt": "Wheat Fields by Jacob van Ruisdael (ca. 1670)",
+    "publicDomain": true,
+    "creditLine": "Bequest of Benjamin Altman, 1913"
+  },
+  {
+    "id": "met-437769",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/437769",
+    "title": "Clothing the Naked",
+    "artist": "Michiel Sweerts",
+    "date": "ca. 1661",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Men"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP-15762-001.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-15762-001.jpg",
+    "alt": "Clothing the Naked by Michiel Sweerts (ca. 1661)",
+    "publicDomain": true,
+    "creditLine": "Gift of Mr. and Mrs. Charles Wrightsman, 1984"
+  },
+  {
+    "id": "met-437826",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/437826",
+    "title": "Venus and Adonis",
+    "artist": "Titian (Tiziano Vecellio)",
+    "date": "1550s",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Cupid",
+      "Adonis",
+      "Venus",
+      "Dogs"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP-19299-001.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-19299-001.jpg",
+    "alt": "Venus and Adonis by Titian (Tiziano Vecellio) (1550s)",
+    "publicDomain": true,
+    "creditLine": "The Jules Bache Collection, 1949"
+  },
+  {
+    "id": "met-437869",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/437869",
+    "title": "Juan de Pareja (ca. 1608–1670)",
+    "artist": "Velázquez (Diego Rodríguez de Silva y Velázquez)",
+    "date": "1650",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Men",
+      "Portraits"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP-14286-001.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14286-001.jpg",
+    "alt": "Juan de Pareja (ca. 1608–1670) by Velázquez (Diego Rodríguez de Silva y Velázquez) (1650)",
+    "publicDomain": true,
+    "creditLine": "Purchase, Fletcher and Rogers Funds, and Bequest of Miss Adelaide Milton de Groot (1876-1967), by exchange, supplemented by gifts from friends of the Museum, 1971"
+  },
+  {
+    "id": "met-437879",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/437879",
+    "title": "Study of a Young Woman",
+    "artist": "Johannes Vermeer",
+    "date": "ca. 1665–67",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Portraits",
+      "Women"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP353256.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP353256.jpg",
+    "alt": "Study of a Young Woman by Johannes Vermeer (ca. 1665–67)",
+    "publicDomain": true,
+    "creditLine": "Gift of Mr. and Mrs. Charles Wrightsman, in memory of Theodore Rousseau Jr., 1979"
+  },
+  {
+    "id": "met-437891",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/437891",
+    "title": "Mars and Venus United by Love",
+    "artist": "Paolo Veronese (Paolo Caliari)",
+    "date": "1570s",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Cupid",
+      "Mars",
+      "Venus",
+      "Horses"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP167124.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP167124.jpg",
+    "alt": "Mars and Venus United by Love by Paolo Veronese (Paolo Caliari) (1570s)",
+    "publicDomain": true,
+    "creditLine": "John Stewart Kennedy Fund, 1910"
+  },
+  {
+    "id": "met-437900",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/437900",
+    "title": "Comtesse de la Châtre (Marie Charlotte Louise Perrette Aglaé Bontemps, 1762–1848)",
+    "artist": "Elisabeth Louise Vigée Le Brun",
+    "date": "1789",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Portraits",
+      "Women"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP320086.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP320086.jpg",
+    "alt": "Comtesse de la Châtre (Marie Charlotte Louise Perrette Aglaé Bontemps, 1762–1848) by Elisabeth Louise Vigée Le Brun (1789)",
+    "publicDomain": true,
+    "creditLine": "Gift of Jessie Woolworth Donahue, 1954"
+  },
+  {
+    "id": "met-438814",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/438814",
+    "title": "The Abduction of Rebecca",
+    "artist": "Eugène Delacroix",
+    "date": "1846",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Battles",
+      "Men",
+      "Women",
+      "Horses"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP-14344-001.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14344-001.jpg",
+    "alt": "The Abduction of Rebecca by Eugène Delacroix (1846)",
+    "publicDomain": true,
+    "creditLine": "Catharine Lorillard Wolfe Collection, Wolfe Fund, 1903"
+  },
+  {
+    "id": "met-439933",
+    "source": "The Metropolitan Museum of Art",
+    "sourceUrl": "https://www.metmuseum.org/art/collection/search/439933",
+    "title": "Lute Player",
+    "artist": "Valentin de Boulogne",
+    "date": "ca. 1625–26",
+    "department": "European Paintings",
+    "culture": "",
+    "tags": [
+      "Men",
+      "Lutes",
+      "Musicians"
+    ],
+    "image": "https://images.metmuseum.org/CRDImages/ep/original/DP168811.jpg",
+    "imageSmall": "https://images.metmuseum.org/CRDImages/ep/web-large/DP168811.jpg",
+    "alt": "Lute Player by Valentin de Boulogne (ca. 1625–26)",
+    "publicDomain": true,
+    "creditLine": "Purchase, Walter and Leonore Annenberg Acquisitions Endowment Fund; Director's Fund; Acquisitions Fund; James and Diane Burke and Mark Fisch and Rachel Davidson Gifts; Louis V. Bell, Harris Brisbane Dick, Fletcher, and Rogers Funds and Joseph Pulitzer Bequest, 2008"
+  }
+]
