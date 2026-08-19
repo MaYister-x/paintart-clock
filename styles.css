@@ -1,0 +1,373 @@
+/*
+  Paintart Clock.
+  Dark by design: the page is a painting, and a painting needs an unlit room.
+*/
+
+:root {
+  --ink: #f4ece0;
+  --ink-dim: rgba(244, 236, 224, 0.72);
+  --ink-faint: rgba(244, 236, 224, 0.5);
+  --backdrop: #0b0a08;
+  --plate-pad: 1.15rem;
+
+  /* Overwritten per artwork by app.js from lib/mood.js. */
+  --clock-family: Georgia, serif;
+  --clock-weight: 500;
+  --clock-tracking: 0.04em;
+
+  /* Overwritten per size step below. */
+  --clock-scale: 1;
+  --beat-ms: 900ms;
+  --flip-ms: 520ms;
+  --fade-ms: 900ms;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--backdrop);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body { overflow: hidden; }
+
+#app {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  /* A wallpaper is a background: no text selection, no long-press menus in the way. */
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- the painting ---------- */
+
+.artwork {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* `cover` is the whole point: fill any aspect ratio without letterboxing. */
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity var(--fade-ms) ease;
+}
+
+[data-image-state='ready'] .artwork { opacity: 1; }
+
+/*
+  Legibility scrim. Two gradients, not one flat wash: darken the top and bottom bands
+  where the clock and the credit sit, and leave the middle of the canvas as close to the
+  original painting as the contrast target allows.
+*/
+.scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 90% at 50% 45%, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.12) 55%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 28%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.72) 100%);
+}
+
+/* ---------- the clock ---------- */
+
+.stage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.clock {
+  font-family: var(--clock-family);
+  font-weight: var(--clock-weight);
+  letter-spacing: var(--clock-tracking);
+  /* Every digit the same advance width, or the layout twitches once a second. */
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: 'tnum' 1, 'lnum' 1;
+  /*
+    vmin, not vw, so the clock stays inside the frame in both orientations — then a hard
+    vw ceiling on top, because the size ladder multiplies that base and the top two steps
+    would otherwise run off the side of a phone.
+    The widest of the six mood faces (Bodoni Moda) draws HH:MM:SS at 3.374x its font-size,
+    and the stage keeps 1rem of padding each side, so 26vw is the largest cap that still
+    fits at 360px: 0.26*360*3.374 + 32 = 348 < 360.
+  */
+  font-size: min(calc(var(--clock-scale) * clamp(3.25rem, 21vmin, 20rem)), 26vw);
+  line-height: 1;
+  color: var(--ink);
+  text-shadow: 0 0.02em 0.14em rgba(0, 0, 0, 0.62), 0 0 0.5em rgba(0, 0, 0, 0.3);
+  transition: font-size 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.clock__face {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.clock__colon {
+  padding: 0 0.06em;
+  opacity: 0.85;
+}
+
+/* Seconds ride along the baseline of HH:MM at a third of the size. */
+.clock__seconds {
+  align-self: flex-start;
+  margin-left: 0.14em;
+  font-size: 0.32em;
+  letter-spacing: 0.08em;
+  opacity: 0.78;
+}
+
+/* ---------- per-digit minute transition ---------- */
+
+.digit {
+  position: relative;
+  display: inline-block;
+  /* 1ch is the advance of "0", which tabular-nums makes the advance of every digit. */
+  width: 1ch;
+  height: 1em;
+  overflow: hidden;
+  text-align: center;
+}
+
+.digit__cur,
+.digit__next {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.digit__next { opacity: 0; }
+
+.digit.is-flipping .digit__cur { animation: digit-out var(--flip-ms) cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+.digit.is-flipping .digit__next { animation: digit-in var(--flip-ms) cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+
+@keyframes digit-out {
+  from { transform: translateY(0); opacity: 1; filter: blur(0); }
+  to { transform: translateY(-0.62em); opacity: 0; filter: blur(0.03em); }
+}
+
+@keyframes digit-in {
+  from { transform: translateY(0.62em); opacity: 0; filter: blur(0.03em); }
+  to { transform: translateY(0); opacity: 1; filter: blur(0); }
+}
+
+/* ---------- second heartbeat ---------- */
+
+/*
+  The beat lives on the colon and the seconds, never on the hour and minute digits: a
+  pulse under a digit that is also sliding reads as a stutter, not a heartbeat.
+*/
+.is-beat.clock__colon { animation: colon-beat var(--beat-ms) ease-out; }
+.is-beat.clock__seconds { animation: seconds-beat var(--beat-ms) ease-out; }
+
+@keyframes colon-beat {
+  0% { opacity: 1; transform: scale(1.06); }
+  22% { opacity: 0.34; transform: scale(1); }
+  100% { opacity: 0.85; transform: scale(1); }
+}
+
+@keyframes seconds-beat {
+  0% { transform: scale(1.09); opacity: 1; }
+  30% { transform: scale(1); opacity: 0.78; }
+  100% { transform: scale(1); opacity: 0.78; }
+}
+
+/* ---------- credit plate and controls ---------- */
+
+.plate {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  /* env() keeps the plate clear of notches and home indicators. */
+  padding:
+    var(--plate-pad)
+    calc(var(--plate-pad) + env(safe-area-inset-right))
+    calc(var(--plate-pad) + env(safe-area-inset-bottom))
+    calc(var(--plate-pad) + env(safe-area-inset-left));
+  font-size: 0.8125rem;
+}
+
+.credit {
+  min-width: 0;
+  max-width: 62ch;
+  opacity: 0.82;
+  transition: opacity 220ms ease;
+}
+
+.plate:hover .credit,
+.plate:focus-within .credit { opacity: 1; }
+
+.credit p {
+  margin: 0 0 0.15rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+}
+
+.credit__title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.credit__meta { color: var(--ink-dim); }
+
+.credit__line {
+  color: var(--ink-faint);
+  font-size: 0.75rem;
+}
+
+.credit__dot { padding: 0 0.35em; }
+
+.credit__source {
+  color: var(--ink-dim);
+  text-decoration: underline;
+  text-decoration-color: rgba(244, 236, 224, 0.35);
+  text-underline-offset: 0.18em;
+}
+
+.credit__source:hover { color: var(--ink); }
+
+.controls {
+  display: flex;
+  flex: none;
+  gap: 0.5rem;
+}
+
+.control {
+  display: grid;
+  place-items: center;
+  /* 44px: the smallest target that is reliably tappable. */
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(244, 236, 224, 0.28);
+  border-radius: 50%;
+  background: rgba(12, 11, 9, 0.42);
+  backdrop-filter: blur(6px);
+  color: var(--ink-dim);
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.control svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.control:hover {
+  background: rgba(20, 18, 15, 0.66);
+  border-color: rgba(244, 236, 224, 0.5);
+  color: var(--ink);
+}
+
+.control:active { transform: scale(0.94); }
+
+.control:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.control[disabled] {
+  opacity: 0.35;
+  cursor: default;
+}
+
+#btn-seed.is-spinning svg { animation: spin 620ms cubic-bezier(0.4, 0, 0.2, 1); }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- narrow screens ---------- */
+
+/*
+  Below ~34rem the credit and four buttons cannot share a row without the title
+  collapsing to two characters, so the plate stacks and the buttons take the lower line.
+*/
+@media (max-width: 34rem) {
+  :root { --plate-pad: 0.85rem; }
+
+  .plate {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+  }
+
+  .credit { max-width: 100%; }
+  .controls { justify-content: space-between; }
+  .clock__seconds { font-size: 0.3em; }
+}
+
+/* Landscape phones: almost no vertical room, so give it all to the painting. */
+@media (max-height: 26rem) and (orientation: landscape) {
+  :root { --plate-pad: 0.6rem; }
+
+  .plate { align-items: center; }
+  .credit__meta { display: none; }
+  .control { width: 38px; height: 38px; }
+  .control svg { width: 17px; height: 17px; }
+}
+
+/* ---------- accessibility ---------- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/*
+  Motion is decoration here, never information: the digits still change, they just stop
+  sliding. app.js reads the same query and commits digits without the animation frame.
+*/
+@media (prefers-reduced-motion: reduce) {
+  .artwork,
+  .clock,
+  .credit,
+  .control,
+  #btn-seed.is-spinning svg,
+  .digit.is-flipping .digit__cur,
+  .digit.is-flipping .digit__next,
+  .is-beat.clock__colon,
+  .is-beat.clock__seconds {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .digit__next { opacity: 0; }
+}
+
+@media (prefers-contrast: more) {
+  .scrim {
+    background:
+      radial-gradient(120% 90% at 50% 45%, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.25) 100%),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.25) 30%, rgba(0, 0, 0, 0.3) 62%, rgba(0, 0, 0, 0.85) 100%);
+  }
+}
