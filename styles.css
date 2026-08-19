@@ -62,16 +62,23 @@ body { overflow: hidden; }
 [data-image-state='ready'] .artwork { opacity: 1; }
 
 /*
-  Legibility scrim. Two gradients, not one flat wash: darken the top and bottom bands
-  where the clock and the credit sit, and leave the middle of the canvas as close to the
-  original painting as the contrast target allows.
+  Legibility scrim. Two gradients, not one flat wash: hold a dark plateau across the band
+  the clock sits in, then fall away so the edges of the painting stay as close to the
+  original as the contrast target allows.
+
+  The plateau is 0.52 black and it is not a taste decision. Compositing black at alpha a
+  over the worst case — a pure white passage of paint — leaves sRGB 255*(1-a), and WCAG
+  large-text contrast against the ink (#f4ece0, luminance 0.83) needs the background at or
+  below luminance 0.243, which works out to a >= 0.47. The catalog contains pale Japanese
+  screens and snow scenes that genuinely hit that case; an earlier 0.12 mid-stop put 24% of
+  the clock under 3:1 on one of them.
 */
 .scrim {
   position: absolute;
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(120% 90% at 50% 45%, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.12) 55%, rgba(0, 0, 0, 0) 100%),
+    radial-gradient(80% 50% at 50% 45%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.52) 60%, rgba(0, 0, 0, 0) 100%),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 28%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.72) 100%);
 }
 
